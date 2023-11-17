@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    #wrap{
+      overflow:hidden;
+      padding:0 20px;
+      display:grid;
+      grid-template-columns:repeat(8,1fr);
+      column-gap:16px;
+    }
+    .header{
+      height:100px;
+      background:rgba(255,0,0,0.2);
+      grid-area:1/1/2/9;
+      z-index:100;
+    }
+    .sec01{
+      /* 동영상  */
+      height:500px;
+      background:green;
+      grid-area:1/1/3/9;
+      z-index:10;
+    }
+    .sec02{
+      height:300px;
+      background:blue;
+      grid-column:1/9;
+    }
+    .sec03{
+      height:300px;
+      background:yellow;
+      grid-column:1/9;
+    }
+    .sec04{
+      height:300px;
+      background:cadetblue;
+      grid-column:1/5;
+    }
+    .sec05{
+      height:300px;
+      background:magenta;
+      grid-column:5/9;
+    }
+    .aside{
+      background:antiquewhite;
+      position:fixed;
+      right:0;
+      top:200px;
+      width:100px;
+    }
+    .footer{
+      background:darkblue;
+      grid-column:1/9;
+    }
+
+
+  </style>
+</head>
+<body>
+  <section id="wrap">
+    <header class="header">헤더</header>
+    <section class="sec sec01">섹션1</section>
+    <section class="sec sec02">섹션2</section>
+    <section class="sec sec03">섹션3</section>
+    <section class="sec sec04">섹션4</section>
+    <section class="sec sec05">섹션5</section>
+    <aside class="aside">어사이드</aside>
+    <footer class="footer">푸타</footer>
+  </section>
+</body>
+</html>

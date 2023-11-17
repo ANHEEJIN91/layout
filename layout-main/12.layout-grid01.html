@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    .container{
+      width:960px;
+      margin:0 auto;
+      border:1px solid black;
+      padding:20px;      
+    }
+    h1{padding:10px;background:red;}
+    p{padding:10px;background:green;}
+
+
+
+    .container{
+      display:grid;
+      grid-template-columns:100px 100px;
+      grid-template-rows:100px;
+      justify-content:space-between;
+    }
+    h1,p{
+      display:grid;
+      justify-content:center;
+      align-items:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>제목</h1>
+    <p>내용</p>
+  </div>
+</body>
+</html>

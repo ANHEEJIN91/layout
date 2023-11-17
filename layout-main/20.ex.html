@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web이란 무엇인가?</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    ul,li{list-style:none;}
+    /* 모바일우선 / 기본스타일 */
+    #wrap{overflow:hidden;}
+    .header,.sec,.footer{padding:20px 0;}
+    .container{
+      max-width:1280px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+    .header .container{
+      max-width:initial;
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+      align-items:flex-end;      
+    }
+    h1,nav{
+      width:100%;
+    }
+    nav{padding:10px;background:black;color:white;}
+    nav ul{
+      display:grid;
+      grid-template-columns:repeat(3,auto);
+      justify-content:space-around;
+    }
+
+    .sec .container{
+      display:grid;      
+      grid-template-areas:
+      'tit'
+      'p1'
+      'p2'
+      'p3';
+      gap:20px;      
+    }
+    .sec h2{grid-area:tit;}
+    .sec p:nth-of-type(1){grid-area:p1;}
+    .sec p:nth-of-type(2){grid-area:p2;}
+    .sec p:nth-of-type(3){grid-area:p3;}
+    
+
+
+
+
+    .footer{
+      background:black;
+      color:white;
+    }
+    /* 768이상 */
+    @media (min-width:768px){
+      .sec .container{
+        grid-template-columns:1fr 2fr;
+        grid-template-areas:
+        'tit p1'
+        '. p2'
+        '. p3'
+        ;
+      }
+    }
+
+
+    /* 1280이상 */
+    @media (min-width:1280px){
+      h1,nav{
+        width:auto;
+      }
+      nav{
+        width:500px;
+        padding:0;
+        background:transparent;
+        color:black;
+      }
+      nav ul{
+        justify-content:space-between;
+      }
+      .sec .container{
+        grid-template-columns:1fr 2fr 2fr;
+        grid-template-areas:
+        'tit p1 p3'
+        '. p2 .'
+        ;
+      }
+      .sec p:nth-of-type(3){
+        grid-row:1/3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section id="wrap">
+    <header class="header">
+      <div class="container">
+        <h1>Web이란 무엇인가?</h1>
+        <nav>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>javaScript</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <hr>
+    <section class="sec">
+      <div class="container">
+        <h2>Web</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor soluta doloremque doloribus. Officia, asperiores, praesentium architecto voluptas tempore repudiandae accusantium laudantium exercitationem alias dolorum culpa. Reiciendis praesentium illum ab corrupti.
+          Velit et ut totam eius quae recusandae, dolore laborum voluptatem, quaerat magnam, exercitationem eos dolorem quo voluptate quisquam ad sapiente beatae provident adipisci magni illum expedita quos reprehenderit. Unde, fugit.
+          Officia itaque eos veniam a ipsum corrupti magnam consectetur quaerat labore, numquam optio nam eveniet! Cumque, sed aut architecto omnis alias fuga repudiandae exercitationem. Dicta id praesentium vel autem fuga?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam harum soluta dicta accusamus quos facilis earum illo architecto? Exercitationem ipsum omnis eveniet voluptatibus et maxime aperiam doloribus corrupti! Officiis, corrupti.
+          Dignissimos corrupti odio tenetur iure, temporibus ex quo quae iusto error. Voluptatem repellat velit minus in nemo temporibus delectus optio rerum sit ea nesciunt quisquam accusantium provident, eaque, animi quae?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, dolore aliquid? Necessitatibus fuga perspiciatis consequatur consequuntur iusto, omnis aliquid accusantium voluptatibus, ab culpa eius tenetur blanditiis nesciunt nobis laboriosam dolor.
+          Inventore vitae dolorum ab ratione, itaque corporis quae neque tempore repellat ex laudantium rerum officiis exercitationem, eveniet vero consequuntur. Accusamus accusantium dignissimos, sapiente illo magnam exercitationem dolorum suscipit eum architecto.
+          Repudiandae, molestias facilis et asperiores quibusdam in a, ipsum vitae nulla rerum ipsa sint magnam repellat commodi! Sequi hic odio omnis eveniet maiores blanditiis, rerum minus nemo ratione iusto fuga.
+          Molestias ab laudantium officiis tenetur iusto temporibus! Minima assumenda eius maiores debitis, veniam nesciunt molestiae quibusdam. Debitis cumque ratione nesciunt fugit voluptas officia consequuntur, sapiente quisquam commodi, delectus, sint veritatis.
+          Nobis facilis dolore nostrum aliquam sit magnam. Sint nulla natus tempore, expedita est dicta temporibus vitae aliquid doloribus qui nesciunt deleniti fuga harum facere magni molestiae culpa corporis porro. Voluptates?
+        </p>
+      </div>
+    </section>
+    <hr>
+    <footer class="footer">
+      <div class="container">
+        <address>Lorem ipsum dolor sit amet consectetur.</address>
+      </div>
+    </footer>
+  </section>
+</body>
+</html>

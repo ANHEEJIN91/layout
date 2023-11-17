@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      /* width:360px; */
+      margin:0 auto;
+      display:flex;
+      background:rgba(0,0,0,0.1);
+    }
+    p{
+      width:25.92592592592593%;
+      height:100px;
+      margin:0 10px;
+    }
+    p:first-child{
+      background:red;
+      margin-left:20px;
+    }
+    p:nth-child(2){
+      background:blue;
+    }
+    p:last-child{
+      background:green;
+      margin-right:20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+  </div>
+</body>
+</html>

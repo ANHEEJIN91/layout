@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    header{
+      /* 화면기준 */
+      position:sticky;
+      top:0;
+      right:100px;
+      /* 포지션 해제 */
+      position:static;
+      width:80%;
+      margin:0 auto;
+      border:1px solid black;
+      padding:20px;
+      background-color:rgba(0,0,0,0.2);
+      background-clip:content-box;
+    }
+    .clearfix::after{
+      content:'';
+      display:block;
+      clear:both;
+    }
+    h1{
+      float:left;
+    }
+    /* 기본위치 기준 */
+    /* p:first-of-type{
+      position:relative;
+      left:400px;
+      top:10px;
+    } */
+    /* 문서기준 */
+    /* p:first-of-type{
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      background:red;
+    } */
+    /* 화면기준 */
+    /* p:first-of-type{
+      position:fixed;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      background:rgba(255,0,0,0.1);
+    } */
+
+    
+    p:last-of-type{
+      float:right;
+    }
+    
+   
+    section{
+      height:10000px;
+    }
+  </style>
+</head>
+<body>
+  <header class="clearfix">    
+    <h1>제목</h1>
+    <p>내용1</p>        
+    <p>내용2</p>    
+  </header>
+  <section></section>
+
+</body>
+</html>

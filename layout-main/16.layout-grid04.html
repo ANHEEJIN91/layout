@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    #wrap{
+      overflow:hidden;
+      padding:0 20px;
+      display:grid;
+      /* grid-template-columns:repeat(8,1fr); */
+      grid-template-areas:
+      'header header header header header header header header'
+      'sec01 sec01 sec01 sec01 sec01 sec01 sec01 sec01'
+      'sec02 sec02 sec02 sec02 sec02 sec02 sec02 sec02'
+      'sec03 sec03 sec03 sec03 sec03 sec03 sec03 sec03'
+      'sec04 sec04 sec04 sec04 sec05 sec05 sec05 sec05'
+      'footer footer footer footer footer footer footer footer'
+      ;
+      column-gap:16px;
+    }
+    .header{
+      height:100px;
+      background:rgba(255,0,0,0.2);
+      grid-area:header;
+      z-index:100;
+    }
+    .sec01{
+      /* 동영상  */
+      height:500px;
+      background:green;
+      grid-area:sec01;
+      z-index:10;
+    }
+    .sec02{
+      height:300px;
+      background:blue;
+      grid-area:sec02
+    }
+    .sec03{
+      height:300px;
+      background:yellow;
+      grid-area:sec03
+    }
+    .sec04{
+      height:300px;
+      background:cadetblue;
+      grid-area:sec04;
+    }
+    .sec05{
+      height:300px;
+      background:magenta;
+      grid-area:sec05;
+    }
+    .aside{
+      background:antiquewhite;
+      position:fixed;
+      right:0;
+      top:200px;
+      width:100px;
+    }
+    .footer{
+      background:darkblue;
+      grid-area:footer;
+    }
+
+
+  </style>
+</head>
+<body>
+  <section id="wrap">
+    <header class="header">헤더</header>
+    <section class="sec sec01">섹션1</section>
+    <section class="sec sec02">섹션2</section>
+    <section class="sec sec03">섹션3</section>
+    <section class="sec sec04">섹션4</section>
+    <section class="sec sec05">섹션5</section>
+    <aside class="aside">어사이드</aside>
+    <footer class="footer">푸타</footer>
+  </section>
+</body>
+</html>

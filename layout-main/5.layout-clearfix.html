@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    header{
+      width:80%;
+      margin:0 auto;
+      border:1px solid black;
+      padding:20px;
+      background-color:rgba(0,0,0,0.2);
+      background-clip:content-box;
+    }
+    .clearfix::after{
+      content:'';
+      display:block;
+      clear:both;
+    }
+    h1,p{
+      display:inline; 
+      vertical-align:middle;     
+    }
+    h1{
+      float:left;
+    }
+    p{
+      float:right;
+      padding-top:10px;      
+    }
+  
+  </style>
+</head>
+<body>
+  <header class="clearfix">
+    <h1>제목</h1>
+    <p>내용1</p>
+  </header>
+</body>
+</html>
